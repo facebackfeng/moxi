@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="icon" href="../img/icontitle.png">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/prompt.css">
+    <link rel="stylesheet" href="../css/goodsdetail.css">
+    <link rel="stylesheet" href="../css/magnifier.css">
+    <script src="../lib/jquery-1.10.1.min.js"></script>
+    <script src="../lib/jquery.cookie.js"></script>
+    <script src="../lib/mycool.js"></script>
+    <script src="../js/prompt.js"></script>
+    <script src="../js/comHeader.js"></script>
+    <script src="../js/magnifier.js"></script>
+    <script src="../js/goodsdetail.js"></script>
+</head>
+<body>
+    <header>
+        <!-- 头部信息栏 -->
+        <div class="header_top">
+            <div class="container">
+                <ul class="insideLeft fl">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span></span>收藏摩西</a>
+                    </li>
+                    <li>
+                        <a id="attenMoxi" href="javascript:;">
+                            <span></span>关注摩西</a>
+                    </li>
+                    <div id="attention" class="attention">
+                        <img src="../img/code.png" alt="">
+                    </div>
+                </ul>
+                <ul class="insideRight fr">
+                    <li>您好，欢迎来到摩西！</li>
+                    <li class="login" id="userinf">
+                        <a href="login.html">登录</a>
+                        <a href="login.html">免费注册</a>
+                    </li>
+                    <li class="toCart">
+                        <a href="cart.html">
+                            <span></span>购物车<i id="carNum">&nbsp;</i>件商品</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span></span>在线客服 400-660-6366</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 头部搜素栏logo -->
+        <div class="header_main">
+            <div class="container">
+                <div class="header_content">
+                    <h1>
+                        <a href="javascript:;">
+                            <img src="../img/logo.png" alt="">
+                            <img src="../img/logoletter.png" alt="">
+                        </a>
+                    </h1>
+                    <div class="search">
+                        <p>日元汇率：0.062242（100日元=6.2242元）</p>
+                        <p class="searchInput">
+                            <input type="text" name="" id="searchBox" placeholder="coach">
+                            <input type="button" name="" id="searchButton" value="搜索">
+                        </p>
+                        <p>
+                            热门搜素：
+                            <a href="javascript:;">酵素</a>
+                            <a href="javascript:;">白色恋人</a>
+                            <a href="javascript:;">胶原蛋白</a>
+                            <a href="javascript:;">象印</a>
+                            <a href="javascript:;">MTG</a>
+                            <a href="javascript:;">SONY</a>
+                            <a href="javascript:;">膳魔师</a>
+                            <a href="javascript:;">花王</a>
+                            <a href="javascript:;">大王</a>
+                        </p>
+                    </div>
+                    <div class="notice">
+                        <img src="../img/header_logo.png" alt="">
+                    </div>
+                </div>
+                <!-- 分类商品导航 -->
+                <div class="nav">
+                    <div class="categorys" id="categorys">
+                        <div class="category fl">商品全部分类</div>
+                        <ul id="menu" class="menu">
+                            <li>
+                                <a class="m_hot" href="">摩西热卖</a>
+                                <div class="erji">
+                                    <dl>
+                                        <dt>热门搜素></dt>
+                                        <dd>
+                                            <a href="">面膜</a>
+                                            <a href="">酵素</a>
+                                            <a href="">清汁</a>
+                                            <a href="">美容</a>
+                                            <a href="">姨妈巾</a>
+                                            <a href="">白色恋人</a>
+                                            <a href="">Cosme</a>
+                                            <a href="">避孕套</a>
+                                            <a href="">胶原蛋白</a>
+                                            <a href="">北海道特产</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>日本零食></dt>
+                                        <dd>
+                                            <a href="">白色恋人</a>
+                                            <a href="">卡乐比</a>
+                                            <a href="">雀巢</a>
+                                            <a href="">TOKYO</a>
+                                            <a href="">BANANA</a>
+                                            <a href="">明治</a>
+                                            <a href="">花田牧场</a>
+                                            <a href="">巧克力</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>大牌母婴></dt>
+                                        <dd>
+                                            <a href="">花王</a>
+                                            <a href="">大王</a>
+                                            <a href="">贝亲</a>
+                                            <a href="">森永</a>
+                                            <a href="">和光堂</a>
+                                            <a href="">固力果</a>
+                                            <a href="">mama&kids</a>
+                                            <a href="">Sassy</a>
+                                            <a href="">爱迪生</a>
+                                            <a href="">明治</a>
+                                            <a href="">津山</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>保健养生></dt>
+                                        <dd>
+                                            <a href="">东茶园</a>
+                                            <a href="">大高酵素</a>
+                                            <a href="">公主酵素</a>
+                                            <a href="">医食同源</a>
+                                            <a href="">Manda/万田酵素</a>
+                                            <a href="">KOBAYASHI/小林制药</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>美妆护肤></dt>
+                                        <dd>
+                                            <a href="">Fancl</a>
+                                            <a href="">Kose/高丝</a>
+                                            <a href="">DHC</a>
+                                            <a href="">SK-ll</a>
+                                            <a href="">SANA豆乳</a>
+                                            <a href="">肌研</a>
+                                            <a href="">植村秀</a>
+                                            <a href="">kiss me</a>
+                                            <a href="">豆腐の盛田屋</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>居家日用></dt>
+                                        <dd>
+                                            <a href="">象印</a>
+                                            <a href="">虎牌</a>
+                                            <a href="">孔雀</a>
+                                            <a href="">狮王LION</a>
+                                            <a href="">膳魔师</a>
+                                            <a href="">京瓷</a>
+                                            <a href="">今治</a>
+                                            <a href="">Polident/保丽净</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>时尚数码></dt>
+                                        <dd>
+                                            <a href="">SONY/索尼</a>
+                                            <a href="">铁三角/audio-technica</a>
+                                            <a href="">卡西欧/CASIO</a>
+                                            <a href="">博士/BOSE</a>
+                                            <a href="">尼康/NIKON</a>
+                                            <a href="">宾得-Pantex </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="m_drink" href="">食品饮料</a>
+                                <div class="erji">
+                                    <dl>
+                                        <dt>零食坚果></dt>
+                                        <dd>
+                                            <a href="">巧克力</a>
+                                            <a href="">糖果</a>
+                                            <a href="">膨化</a>
+                                            <a href="">肉干肉脯</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>饼干糕点></dt>
+                                        <dd>
+                                            <a href="">饼干</a>
+                                            <a href="">夹心</a>
+                                            <a href="">糕点</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>酒水饮料></dt>
+                                        <dd>
+                                            <a href="">水果蔬汁</a>
+                                            <a href="">茶</a>
+                                            <a href="">碳酸饮料</a>
+                                            <a href="">功能饮料</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>咖啡冲调></dt>
+                                        <dd>
+                                            <a href="">麦片</a>
+                                            <a href="">奶粉</a>
+                                            <a href="">速溶咖啡</a>
+                                            <a href="">咖啡豆</a>
+                                            <a href="">可可粉</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="m_nutrition" href="">营养保健</a>
+                                <div class="erji">
+                                    <dl>
+                                        <dt>营养成分></dt>
+                                        <dd>
+                                            <a href="">维生素</a>
+                                            <a href="">蛋白质</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>营养健康></dt>
+                                        <dd>
+                                            <a href="">减肥瘦身</a>
+                                            <a href="">排毒养颜</a>
+                                            <a href="">增强免疫/抗疲劳</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>调理保健></dt>
+                                        <dd>
+                                            <a href="">减肥丰胸</a>
+                                            <a href="">家庭药箱</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="m_beauty" href="">美妆护肤</a>
+                                <div class="erji">
+                                    <dl>
+                                        <dt>洗发护发></dt>
+                                        <dd>
+                                            <a href="">洗发水</a>
+                                            <a href="">护发素</a>
+                                            <a href="">定型</a>
+                                            <a href="">无硅产品</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>沐浴用品></dt>
+                                        <dd>
+                                            <a href="">沐浴露</a>
+                                            <a href="">香皂</a>
+                                            <a href="">洗手液</a>
+                                            <a href="">浴盐</a>
+                                            <a href="">沐浴套装</a>
+                                            <a href="">止汗香体</a>
+                                            <a href="">足部</a>
+                                            <a href="">手部护理</a>
+                                            <a href="">身体护理</a>
+                                            <a href="">身体乳</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>面部护肤></dt>
+                                        <dd>
+                                            <a href="">洁面</a>
+                                            <a href="">面膜</a>
+                                            <a href="">化妆水</a>
+                                            <a href="">乳液面霜</a>
+                                            <a href="">眼霜/眼膜</a>
+                                            <a href="">去角质/黑头/祛痘</a>
+                                            <a href="">防晒</a>
+                                            <a href="">卸妆</a>
+                                            <a href="">保湿</a>
+                                            <a href="">美白</a>
+                                            <a href="">精华/精油</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>保健养生></dt>
+                                        <dd>
+                                            <a href="">东茶园</a>
+                                            <a href="">大高酵素</a>
+                                            <a href="">公主酵素</a>
+                                            <a href="">医食同源</a>
+                                            <a href="">Manda/万田酵素</a>
+                                            <a href="">KOBAYASHI/小林制药</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>彩妆香氛></dt>
+                                        <dd>
+                                            <a href="">BB霜</a>
+                                            <a href="">粉底</a>
+                                            <a href="">男士香水</a>
+                                            <a href="">女士香水</a>
+                                            <a href="">唇膏/口红</a>
+                                            <a href="">美甲</a>
+                                            <a href="">腮红/胭脂</a>
+                                            <a href="">眉笔/眉粉/眉膏</a>
+                                            <a href="">假睫毛</a>
+                                            <a href="">睫毛膏/增长液</a>
+                                            <a href="">眼线</a>
+                                            <a href="">蜜粉/散粉</a>
+                                            <a href="">粉饼</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>女性护理></dt>
+                                        <dd>
+                                            <a href="">护垫</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>口腔护理></dt>
+                                        <dd>
+                                            <a href="">牙刷/电动牙刷</a>
+                                            <a href="">牙膏</a>
+                                            <a href="">牙粉/牙贴</a>
+                                            <a href="">牙线/牙线棒</a>
+                                            <a href="">儿童口腔护理</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="m_baby" href="">母婴用品</a>
+                                <div class="erji">
+                                    <dl>
+                                        <dt>奶粉辅食></dt>
+                                        <dd>
+                                            <a href="">奶粉</a>
+                                            <a href="">米粉/菜粉</a>
+                                            <a href="">宝宝零食</a>
+                                            <a href="">面条/粥饭</a>
+                                            <a href="">果泥/果汁/菜泥/肉泥</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>尿裤湿巾></dt>
+                                        <dd>
+                                            <a href="">纸尿裤</a>
+                                            <a href="">拉拉裤</a>
+                                            <a href="">婴儿湿巾</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>宝宝喂养></dt>
+                                        <dd>
+                                            <a href="">奶瓶</a>
+                                            <a href="">奶嘴</a>
+                                            <a href="">牙胶安抚</a>
+                                            <a href="">暖奶/消毒</a>
+                                            <a href="">餐具</a>
+                                            <a href="">水壶/水杯</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>宝宝洗护></dt>
+                                        <dd>
+                                            <a href="">宝宝护肤</a>
+                                            <a href="">宝宝洗浴</a>
+                                            <a href="">洗衣液/皂</a>
+                                            <a href="">驱蚊防蚊</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>孕妈专区></dt>
+                                        <dd>
+                                            <a href="">营养品</a>
+                                            <a href="">产后修复</a>
+                                            <a href="">孕期化妆品</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>安全出行></dt>
+                                        <dd>
+                                            <a href="">安全座椅</a>
+                                            <a href="">学步车</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>宝宝玩具></dt>
+                                        <dd>
+                                            <a href="">益智玩具</a>
+                                            <a href="">模型</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="m_home" href="">家居生活</a>
+                                <div class="erji">
+                                    <dl>
+                                        <dt>厨房用具></dt>
+                                        <dd>
+                                            <a href="">烹饪锅具</a>
+                                            <a href="">刀具菜板</a>
+                                            <a href="">厨房配件</a>
+                                            <a href="">水具/酒具</a>
+                                            <a href="">餐具</a>
+                                            <a href="">茶具/咖啡具</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>生活用品></dt>
+                                        <dd>
+                                            <a href="">水壶/水杯</a>
+                                            <a href="">毛巾</a>
+                                            <a href="">浴巾</a>
+                                            <a href="">收纳用品</a>
+                                            <a href="">净化除味</a>
+                                            <a href="">纸品湿巾</a>
+                                            <a href="">衣物清洁</a>
+                                            <a href="">家庭清洁</a>
+                                            <a href="">驱虫用品</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="m_digital" href="">数码电器</a>
+                                <div class="erji">
+                                    <dl>
+                                        <dt>家用小电器></dt>
+                                        <dd>
+                                            <a href="">电饭煲</a>
+                                            <a href="">空气净化器</a>
+                                            <a href="">微波炉/烤箱</a>
+                                            <a href="">面包机/松饼机</a>
+                                            <a href="">厨余处理</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>美容健康></dt>
+                                        <dd>
+                                            <a href="">美容仪</a>
+                                            <a href="">剃须刀</a>
+                                            <a href="">按摩器</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>汽车装饰></dt>
+                                        <dd>
+                                            <a href="">脚垫</a>
+                                            <a href="">坐垫</a>
+                                            <a href="">座套</a>
+                                            <a href="">头枕腰靠</a>
+                                            <a href="">空气净化</a>
+                                            <a href="">车内饰品</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>摄影摄像></dt>
+                                        <dd>
+                                            <a href="">数码相机</a>
+                                            <a href="">镜头</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>时尚影音></dt>
+                                        <dd>
+                                            <a href="">耳机/耳麦</a>
+                                            <a href="">音箱/音响</a>
+                                            <a href="">MP3/MP4</a>
+                                            <a href="">手机耳机</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>智能设备></dt>
+                                        <dd>
+                                            <a href="">智能手环</a>
+                                            <a href="">健康检测</a>
+                                            <a href="">智能配饰</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>办公用品></dt>
+                                        <dd>
+                                            <a href="">笔类</a>
+                                            <a href="">本类</a>
+                                            <a href="">办公周边</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="m_adult" href="">成人用品</a>
+                                <div class="erji">
+                                    <dl>
+                                        <dt>计生用品></dt>
+                                        <dd>
+                                            <a href="">超薄避孕套</a>
+                                            <a href="">特色安全套</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>女性用品></dt>
+                                        <dd>
+                                            <a href="">转震棒</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="navtitle fl">
+                        <li>
+                            <a href="../index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="goodslist.html">
+                                <img src="../img/3013191871.gif" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="goodslist.html">国内现货</a>
+                        </li>
+                        <li>
+                            <a href="goodslist.html">日本现货</a>
+                        </li>
+                        <li>
+                            <a href="goodslist.html">
+                                <img src="../img/2100501098.gif" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="goodslist.html">乐天专区</a>
+                        </li>
+                        <li>
+                            <a href="goodslist.html">日本亚马逊专区</a>
+                        </li>
+                        <li>
+                            <a href="goodslist.html">代购/代拍</a>
+                        </li>
+                        <li>
+                            <a href="goodslist.html">ECC蜂胶</a>
+                        </li>
+                        <li>
+                            <a href="goodslist.html">留言板</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="detail-box" id="detailBox">
+                <h2>
+                    <!-- <a href="goodslist.html"><strong>家居/日化</strong><span>> 厨具  > 水具/酒具</span></a> -->
+                </h2>
+                <div class="detail-box-left fl">
+                    <div class="magnifier" id="magnifier1">
+                        <div class="magnifier-container">
+                            <div class="images-cover"></div>
+                            <!--当前图片显示容器-->
+                            <div class="move-view"></div>
+                            <!--跟随鼠标移动的盒子-->
+                        </div>
+                        <div class="magnifier-assembly">
+                            <div class="magnifier-btn">
+                                <span class="magnifier-btn-left"></span>
+                                <span class="magnifier-btn-right"></span>
+                            </div>
+                            <!--按钮组-->
+                            <div class="magnifier-line">
+                                <ul class="clearfix animation03">
+                                    <li>
+                                        <div class="small-img small-img1">
+                                            <img src="../img/goods002.jpg" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="small-img small-img2">
+                                            <img src="../img/goods002.jpg" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--缩略图-->
+                        </div>
+                        <div class="magnifier-view"></div>
+                        <!--经过放大的图片显示容器-->
+                    </div>
+                </div>
+                <div class="detail-box-center fl">
+                    <dl id="detailDl">
+                        <dt>象印/ZOJIRUSHI 2017新款日本原装象印车载不锈钢拧盖保温杯 SM-LB48-PM粉红色</dt>
+                        <dd class="hyb-p-price">
+                            <ul>
+                                <li>价格：¥<span class="hyb-price-money" id="em-pricecny">174.41</span>
+                                </li>
+                                <li>市场价：<span class="hyb-price-ago">¥309.80</span></li>
+                            </ul>
+                        </dd>
+                        <dd class="hyb-p-place">
+                            <ul>
+                                <li class="hyb-p-li1">品牌：象印/ZOJIRUSHI</li>
+                                <li class="hyb-p-li2">产地：日本</li>
+                                <li class="hyb-p-li3">所属国：日本</li>
+                            </ul>
+                        </dd>
+                        <dd class="hyb-pcom-dd hyb-p-code">
+                            <!-- <div class="hyb-p-dt">
+                                编&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：
+                            </div>
+                            63700(636431552073776493) -->
+                        </dd>
+                        <dd class="hyb-pcom-dd hyb-p-has">
+                            <div class="hyb-p-dt">
+                                库&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;存：
+                            </div>
+                            <span class="has">245</span>
+                        </dd>
+                        <dd class="hyb-pcom-dd hyb-p-set">
+                            <div class="hyb-p-dt">
+                                配送信息：
+                            </div>
+                            <ul id="hyb-p-setlist">
+                                <li class="active"><a href="javascript:;">海外直邮<b class="hyb-right-red"></b></a></li>
+                                <li><a href="javascript:;">经济航空运<b class="hyb-right-red"></b></a></li>
+                                <li><a href="javascript:;">海运<b class="hyb-right-red"></b></a></li>
+                                <li><a href="javascript:;">特惠直邮<b class="hyb-right-red"></b></a></li>
+                            </ul>
+                            <div class="setlist-mess" id="setlist-mess">
+                                <div class="mess" style="display: block;">海外直邮，发货后约3~10天到货</div>
+                                <div class="mess">经济航空运，发货后约7~20天到货</div>
+                                <div class="mess">海外直邮，发货后约2~3月到货</div>
+                                <div class="mess">特惠直邮（DPS），发货后约9~11天到货</div>
+                            </div>
+                        </dd>
+                        <dd class="hyb-pcom-dd hyb-p-color">
+                            <div class="hyb-p-dt">
+                                颜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色：
+                            </div>
+                            <ul id="hyb-color">
+                                <li><a href="javascript:;">银色<b></b></a></li>
+                                <li><a href="javascript:;">黑色<b></b></a></li>
+                                <li><a href="javascript:;">粉金色<b></b></a></li>
+                                <li><a href="javascript:;">白色<b></b></a></li>
+                                <li><a href="javascript:;">红色<b></b></a></li>
+                                <li><a href="javascript:;">粉色<b></b></a></li>
+                            </ul>
+                        </dd>
+                        <dd class="hyb-pcom-dd chooseNum">
+                            <div class="hyb-p-dt">
+                                数量信息：
+                            </div>
+                            <div class="hyb-p-dd">
+                                <a class="cutnum numbtn" href="javascript:;">-</a>
+                                <input type="text" id="inputNum" value="1">
+                                <a class="addnum numbtn" href="javascript:;">+</a>
+                                <span style="color: red;"></span>
+                            </div>
+                        </dd>
+                        <dd class="hyb-pcom-dd hyb-p-saled">
+                            <div class="hyb-p-dt">
+                                销&nbsp;量&nbsp;：
+                            </div>
+                            270
+                        </dd>
+                        <dd class="hyb-pcom-dd hyb-p-btn">
+                            <a class="addToCart" href="javascript:;"><img src="../img/car-btn.png" alt="">加入购物车</a>
+                            <a class="buy" href="javascript:;">立即购买</a>
+                        </dd>
+                        <div class="hyb-wrap-share">
+                            <div class="hyb-p-share fr">
+                                <a href="javascript:;">赞（0）</a>
+                                <a href="javascript:;">加入收藏</a>
+                                <a class="youhui" id="youhui" href="javascript:;">优惠活动
+                                    <div style="position: absolute; border-radius: 5px; text-align: center; left: -100px; top: 30px; width: 240px; padding: 15px; border: 5px solid rgb(233, 132, 80); background: rgb(255, 255, 255); color:#f86f76;">
+                                        <div style="line-height: 18px;">
+                                            打开微信扫描二维码关注摩西，及时掌握最新优惠信息，还支持微信下单哦！
+                                        </div>
+                                        <img src="../img/code.png" width="200" height="200">
+                                        <div>
+                                            摩西官方微信：moximoxishopping
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+                <div class="detail-box-right fr">
+                    <div class="rightTop">
+                        <img src="../img/3013381460.png" alt="">
+                        <span>摩妞点评</span>
+                    </div>
+                    <div class="rightB">
+                        <img src="../img/3013395486.png" alt="">
+                        <a href="javascript:;"><img src="../img/3013394858.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="feature">
+                <a href="goodslist.html"><img src="../img/ECC.jpg" alt=""></a>
+                <img src="../img/1516055389.png" alt="">
+            </div>
+            <div class="all">
+                <div class="allLeft"></div>
+                <div class="allRight fl">
+                    <div class="hyb-title">
+                        <ul id="hyb-title">
+                            <li class="active">商品详情</li>
+                            <li>商品评论</li>
+                            <li>日淘FAQ</li>
+                        </ul>
+                    </div>
+                    <div class="hyb-cons" id="hyb-cons">
+                        <div class="con" style="display: block;">
+                            <div class="details-con">
+                                <dl id="details-content">
+                                    <dt>商品参数</dt>
+                                    <dd>商品名称：<span>象印/ZOJIRUSHI 2017新款日本原装象印车载不锈钢拧盖保温杯 SM-LB36-NP粉红金</span></dd>
+                                    <dd>品牌所属国：<span>日本</span></dd>
+                                    <dd>品牌：<span>象印/ZOJIRUSHI</span></dd>
+                                    <dd>产地：<span>泰国</span></dd>
+                                    <dd>条形码：<span>4901001000531</span></dd>
+                                </dl>
+                            </div>
+                            <div class="con-info">
+                                <h2>一淘活动，售完即止，元旦后发货。</h2>
+                                新集装商品因在提交订单后即向海关申报，所以提交订单后将无法变更价格，颜色，收货人信息，请在确认后再提交订单，谢谢！
+                            </div>
+                        </div>
+                        <div class="con con-comment">
+                            <ul class="comment" id="comment">
+                                <li>
+                                    月下离殇：
+                                    <p>东西不错，值得购买</p>
+                                </li>
+                            </ul>
+                            <p class="p" style="text-align: center;"></p>
+                        </div>
+                        <div class="con">
+                            <img src="../img/2911064724.jpg" alt="摩西网日本代购优势" title="摩西网日本代购优势">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="link">
+        <div class="container">
+            <div class="link_info fl">
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="">购物流程</a></dd>
+                    <dd><a href="">会员介绍</a></dd>
+                    <dd><a href="">订单状态</a></dd>
+                    <dd><a href="">积分说明</a></dd>
+                    <dd><a href="">常见问题</a></dd>
+                    <dd><a href="">搜素小贴士</a></dd>
+                    <dd><a href="">税则归类表</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于配送</dt>
+                    <dd><a href="">配送方式</a></dd>
+                    <dd><a href="">关于邮资</a></dd>
+                    <dd><a href="">配送时间</a></dd>
+                    <dd><a href="">关于关税</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于支付</dt>
+                    <dd><a href="">网上银行</a></dd>
+                    <dd><a href="">银联国际支付</a></dd>
+                    <dd><a href="">银联在线支付</a></dd>
+                    <dd><a href="">支付宝</a></dd>
+                    <dd><a href="">银行电汇</a></dd>
+                    <dd><a href="">常见支付问题</a></dd>
+                </dl>
+                <dl>
+                    <dt>售后服务</dt>
+                    <dd><a href="">服务承诺</a></dd>
+                    <dd><a href="">售后保证</a></dd>
+                    <dd><a href="">退款说明</a></dd>
+                    <dd><a href="">日本节假日</a></dd>
+                </dl>
+                <dl>
+                    <dt>相关信息</dt>
+                    <dd><a href="">关于摩西</a></dd>
+                    <dd><a href="">联系我们</a></dd>
+                    <dd><a href="">招贤纳士</a></dd>
+                    <dd><a href="">隐私保护</a></dd>
+                    <dd><a href="">网站地图</a></dd>
+                    <dd><a href="">RSS订阅</a></dd>
+                </dl>
+            </div>
+            <div class="link_kefu fl">
+                <dl>
+                    <dt>客服热线</dt>
+                    <dd>（周一到周五 09:00~18:00）</dd>
+                    <dd>400-660-6366</dd>
+                </dl>
+                <dl>
+                    <dt>在线客服</dt>
+                    <dd>（周一到周五 09:00~18:00）</dd>
+                    <dd>
+                        <a href=""><img src="../img/kefu2.png" alt=""></a>
+                    </dd>
+                    <dd>周六周日请发邮件至cs@moximoxi.net 我们会尽快解决您的问题</dd>
+                </dl>
+            </div>
+            <div class="link_code fl">
+                <img src="../img/code.png" alt="">
+                <dl>
+                    <dt>摩西网官方微信</dt>
+                    <dd>摩西网五周年中大促</dd>
+                    <dd>关注微信千元现金券</dd>
+                    <dd>抽奖等你拿！</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footService"></div>
+        <div class="copyRight_con">
+            <div class="container">
+                <p>沪ICP备15046510号 摩西网版权所有 Copyright 2009-2015 All Rights Reserved</p>
+                <div class="brand_link">
+                    <a href=""><img src="../img/foot_pic_04.png" alt="支付宝" title="支付宝"></a>
+                    <a href=""><img src="../img/foot_pic_03.png" alt="银联特约商户" title="银联特约商户"></a>
+                    <a href=""><img src="../img/1211023105.png" alt="浙江省网络工商" title="浙江省网络工商"></a>
+                    <a href=""><img src="../img/foot_pic_01.png" alt="中国电子商务诚信单位" title="中国电子商务诚信单位"></a>
+                    <a href=""><img src="../img/foot_pic_02.png" alt="信用之星" title="信用之星"></a>
+                    <a href=""><img src="../img/foot_pic_05.png" alt="什么值得买" title="什么值得买"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    $(function() {
+	
+        var magnifierConfig = {
+            magnifier : "#magnifier1",//最外层的大容器
+            width : 350,//承载容器宽
+            height : 350,//承载容器高
+            moveWidth : 200,//如果设置了移动盒子的宽度，则不计算缩放比例
+            zoom : 5//缩放比例
+        };
+
+        var _magnifier = magnifier(magnifierConfig);
+
+        /*magnifier的内置函数调用*/
+        /*
+            //设置magnifier函数的index属性
+            _magnifier.setIndex(1);
+
+            //重新载入主图,根据magnifier函数的index属性
+            _magnifier.eqImg();
+        */
+    });
+
+</script>
+</html>
