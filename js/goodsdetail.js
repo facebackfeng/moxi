@@ -53,7 +53,7 @@ $(function () {
             var arr = JSON.parse(str);
             console.log(arr);
             $(document).attr('title',arr[0].name);
-            html1 = `<a href="goodslist.html"><strong>${arr[0].belong1}</strong><span>${arr[0].belong2}</span></a>`;
+            var html1 = `<a href="goodslist.html"><strong>${arr[0].belong1}</strong><span>${arr[0].belong2}</span></a>`;
             $('#detailBox h2').html(html1);
             $('#detailBox .small-img1').find('img').attr("src",arr[0].url1);
             $('#detailBox .small-img2').find('img').attr("src",arr[0].url2);
@@ -61,17 +61,17 @@ $(function () {
             $('.magnifier-view').find('img').attr("src",arr[0].url1);
             $('#detailDl dt').html(arr[0].name);
             $('#em-pricecny').html(arr[0].nowprice);
-            html2 = `¥${arr[0].oldprice}`;
+            var html2 = `¥${arr[0].oldprice}`;
             $('#detailDl .hyb-price-ago').html(html2);
-            html3 = `品牌：${arr[0].brand}`;
+            var html3 = `品牌：${arr[0].brand}`;
             $('.hyb-p-li1').html(html3);
-            html4 = `<div class="hyb-p-dt">
+            var html4 = `<div class="hyb-p-dt">
                         编&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：
                     </div>
                     ${arr[0].code}`;
             $('.hyb-p-code').html(html4);
             $('.has').html(arr[0].has);
-            html5 = `<div class="hyb-p-dt">
+            var html5 = `<div class="hyb-p-dt">
                         销&nbsp;量&nbsp;：
                     </div>
                     ${arr[0].salednum}`;
@@ -242,7 +242,7 @@ $(function () {
         var res = arr.list.map(function (item) {
             return `<li>
                         ${item.name}：
-                        <p>${item.mess}</p>
+                        <p>${filterTex(item.mess)}</p>
                     </li>`;
         }).join('');
         $('#comment').append(res);
@@ -254,6 +254,7 @@ $(function () {
             if (isok) {
                 if ($('.con-comment').scrollTop() >= $('#comment').height() - $('.con-comment').height()) {
                     isok = false;
+                    $('#comment .loading').css('display','block');
                     setTimeout(() => {
                         $.ajax({
                             type: "POST",
@@ -266,6 +267,7 @@ $(function () {
                         });
                         num++;
                         isok = true;
+                        $('#comment .loading').css('display','none');
                     }, 1000);
                 }
             }

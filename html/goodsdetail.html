@@ -11,9 +11,9 @@
     <script src="../lib/jquery-1.10.1.min.js"></script>
     <script src="../lib/jquery.cookie.js"></script>
     <script src="../lib/mycool.js"></script>
+    <script src="../lib/magnifier.js"></script>
     <script src="../js/prompt.js"></script>
     <script src="../js/comHeader.js"></script>
-    <script src="../js/magnifier.js"></script>
     <script src="../js/goodsdetail.js"></script>
 </head>
 <body>
@@ -734,7 +734,7 @@
                             <li>日淘FAQ</li>
                         </ul>
                     </div>
-                    <div class="hyb-cons" id="hyb-cons">
+                    <div class="hyb-cons" id="hyb-cons" style="position: relative;">
                         <div class="con" style="display: block;">
                             <div class="details-con">
                                 <dl id="details-content">
@@ -753,10 +753,13 @@
                         </div>
                         <div class="con con-comment">
                             <ul class="comment" id="comment">
-                                <li>
+                                <!-- <li>
                                     月下离殇：
                                     <p>东西不错，值得购买</p>
-                                </li>
+                                </li> -->
+                                <div class="loading" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 120px;height: 90px;border-radius: 8px;display: none;">
+                                    <img src="../img/loading.gif" style="width: 120px;height: 90px;border-radius: 10px;opacity: .6;" alt="">
+                                </div>
                             </ul>
                             <p class="p" style="text-align: center;"></p>
                         </div>
